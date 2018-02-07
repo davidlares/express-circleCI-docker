@@ -1,0 +1,41 @@
+Dockerfile
+------
+Dockerfile este file es un manifiesto de comandos que se deben correr para construir
+nuestro environment correctamente cada vez.
+
+-El FROM. Designa una imagen que queremos usar como base.
+-COPY. Mueve files desde nuestra máquina local al container. Con esto podemos mover nuestro código al container.
+-RUN. Permite correr comandos arbitrarios.
+-CMD. Le indica a Docker que éste es el default command con el que se va a correr el container.
+-Add. Copia un archivo desde el host en el contenedor. (archivos del host al contenedor)
+-CMD. Configura comandos por defecto para ser ejecutados o se pasa al punto de entrada.
+-ENTRYPOINT. Ajusta el punto de entrada por defecto de la aplicación desde el contenedor.
+-ENV. Inicializa variables de entorno (por ejemplo, “clave=valor”)
+-EXPOSE. Expone un puerto al exterior. (el contenedor entiende que el puerto es disponible para la maq local)
+-MAINTAINER. Establece los datos de autor/propietario del archivo Dockerfile
+-USER. Establece el usuario para ejecutar los contenedores de la imagen.
+-VOLUMEN. Monta un directorio desde el host al contenedor.
+-WORKDIR. Establece el directorio para las directivas de CMD que se ejecutarán. (te mueve al directorio)
+
+.DOCKERIGNORE
+-----
+  Archivo donde se pueden poner la lista de archivos a ignorar cuando se crea el artefacto
+  Resolver el problemas en tener un ambiente similar (produccion / desarrollo)
+  Archivos innecesarios, duplicados o que compilen directamente al OS local
+
+
+Generar el contenedor
+-----
+  docker build -t devops:latest .
+    * Genera la cantidad de layers
+
+  correr el contenedor
+
+    docker run -p 3000:3000 (puerto maquina local, puerto maquina contenedor) -> mapeo de puertos, routing
+
+  Correr el contendedor en Background
+   flag -d (deattach), retorna un ID que identifica el proceso
+
+  Para correr otros elementos comandos dentro del Dockerfile
+
+    docker run [image] npm test (corre los test del package.json dentro del contenedor)

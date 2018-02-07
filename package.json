@@ -1,0 +1,16 @@
+{
+  "name": "do-first",
+  "version": "1.0.0",
+  "description": "node app with expressjs for devops demonstration",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "David Lares <david.e.lares@gmail.com> (https://twitter.com/davidares3)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mocha": "^5.0.0",
+    "supertest": "^3.0.0"
+  }
+}
