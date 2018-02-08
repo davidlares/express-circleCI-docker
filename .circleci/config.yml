@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - checkout
-      - run: docker build -t devops:latest .
+      - run: docker build -t devops:latest -f ../Dockerfile
       # Download and cache dependencies
       - restore_cache:
           keys:
