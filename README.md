@@ -1,9 +1,9 @@
-## DavidDevOps
+## Circle CI Exercise
 
-Ejemplo de CI sobre una aplicación ExpressJS. Uso de CircleCI y Docker. Parte del curso profesional de DevOps de Platzi
+CI example on an ExpressJS application. Using CircleCI and Docker. Part of Platzi's Professional DevOps course.
 
-## Créditos
-[David E Lares S](https://davidlares.com)
+## Credits
+[David Lares S](https://davidlares.com)
 
-## Licencia
+## License
 [MIT](https://opensource.org/licenses/MIT)
